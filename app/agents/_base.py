@@ -66,8 +66,13 @@ def run_agent_sync(
             )
             parsed = resp.parsed  # may raise ValidationError on a non-conforming response
             if parsed is not None:
+                u = getattr(resp, "usage_metadata", None)
+                tin = getattr(u, "prompt_token_count", 0) or 0
+                tout = getattr(u, "candidates_token_count", 0) or 0
                 agent_monitor.record_done(
-                    agent_name, f"returned {schema.__name__} ({len(resp.text or ''):,} chars)"
+                    agent_name,
+                    f"returned {schema.__name__} ({tin:,}→{tout:,} tokens)",
+                    tokens_in=tin, tokens_out=tout,
                 )
                 return parsed
             last_err = f"empty parsed output (raw: {resp.text!r})"

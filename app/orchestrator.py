@@ -70,6 +70,19 @@ async def generate_brief(
     depend on the planner output and run in parallel; Stage 4 (synthesizer)
     depends on all prior stages.
     """
+    from app import agent_monitor
+
+    agent_monitor.pipeline_begin()
+    try:
+        return await _generate_brief_inner(client_id, meeting_datetime)
+    finally:
+        agent_monitor.pipeline_end()
+
+
+async def _generate_brief_inner(
+    client_id: str,
+    meeting_datetime: datetime,
+) -> BriefSchema:
     # -----------------------------------------------------------------------
     # Stages 1 + 2 in parallel
     # -----------------------------------------------------------------------
