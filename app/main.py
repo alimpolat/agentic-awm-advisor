@@ -217,6 +217,22 @@ async def get_trends(client_id: str):
 
 
 # ---------------------------------------------------------------------------
+# Agent Ops — live fleet status for the cockpit's monitor panel
+# ---------------------------------------------------------------------------
+
+
+@app.get("/api/agents")
+async def get_agents():
+    """Live status of every agent in the fleet (idle/running/done/error +
+    current activity + last duration). Polled by the AgentMonitor panel;
+    instrumented at the single run_agent_sync seam, so all stage agents and
+    the chat agent report automatically."""
+    from app import agent_monitor
+
+    return agent_monitor.snapshot()
+
+
+# ---------------------------------------------------------------------------
 # Chat
 # ---------------------------------------------------------------------------
 

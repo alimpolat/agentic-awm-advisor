@@ -17,6 +17,7 @@ import RiskFlags from "./components/RiskFlags";
 import FollowUpPanel from "./components/FollowUpPanel";
 import CitationDrawer from "./components/CitationDrawer";
 import ChatPanel from "./components/ChatPanel";
+import AgentMonitor from "./components/AgentMonitor";
 import ChartsDemo from "./ChartsDemo";
 
 const CLIENT_ID = "bergstrom";
@@ -115,6 +116,7 @@ function Cockpit({
 
           <RiskFlags flags={brief.risk_flags} />
           <FollowUpPanel />
+          <AgentMonitor clientId={CLIENT_ID} />
         </div>
 
         {/* Right column — 30% */}

@@ -511,4 +511,16 @@ def _dedup_refs(refs: list[EvidenceRef]) -> list[EvidenceRef]:
 
 async def run(req: ChatRequest) -> ChatResponse:
     """Async entry point — runs _run_sync in a threadpool to avoid blocking the event loop."""
-    return await asyncio.to_thread(_run_sync, req)
+    from app import agent_monitor
+
+    q = (req.question or "")[:70]
+    agent_monitor.record_start("chat", f'answering: "{q}…"')
+    try:
+        resp = await asyncio.to_thread(_run_sync, req)
+        agent_monitor.record_done(
+            "chat", f'answered ({len(resp.cited_refs)} citations, {resp.confidence})'
+        )
+        return resp
+    except Exception as e:
+        agent_monitor.record_error("chat", str(e))
+        raise

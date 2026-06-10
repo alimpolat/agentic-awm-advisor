@@ -50,6 +50,11 @@ def run_agent_sync(
         and retried; the second failure surfaces as RuntimeError, not ValidationError.
     """
     chosen = model or settings.gemini_model_flash
+    from app import agent_monitor
+
+    agent_monitor.record_start(
+        agent_name, f"thinking over {len(contents):,} chars → {schema.__name__} on {chosen}"
+    )
     last_err: str | None = None
     for attempt in range(2):  # one retry
         try:
@@ -61,10 +66,14 @@ def run_agent_sync(
             )
             parsed = resp.parsed  # may raise ValidationError on a non-conforming response
             if parsed is not None:
+                agent_monitor.record_done(
+                    agent_name, f"returned {schema.__name__} ({len(resp.text or ''):,} chars)"
+                )
                 return parsed
             last_err = f"empty parsed output (raw: {resp.text!r})"
         except ValidationError as e:
             last_err = f"schema validation failed: {e}"
+    agent_monitor.record_error(agent_name, last_err or "no valid structured output")
     raise RuntimeError(
         f"{agent_name}: model returned no valid structured output after 2 attempts. "
         f"Last error: {last_err}"
