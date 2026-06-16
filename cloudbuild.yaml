@@ -5,7 +5,7 @@ steps:
     args: ['push','europe-west1-docker.pkg.dev/$PROJECT_ID/awm-poc/awm-poc']
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
-    args: ['run','deploy','nordea-awm-poc',
+    args: ['run','deploy','agentic-awm-advisor',
            '--image','europe-west1-docker.pkg.dev/$PROJECT_ID/awm-poc/awm-poc',
            '--region','europe-west1',
            '--allow-unauthenticated',
