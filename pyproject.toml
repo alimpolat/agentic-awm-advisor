@@ -1,7 +1,7 @@
 [project]
-name = "nordea-awm-poc"
+name = "agentic-awm-advisor"
 version = "0.1.0"
-description = "Agentic advisor-flow POC for Nordea AWM — five-stage brief generation over a Nordic UHNW persona."
+description = "Agentic advisor-flow POC for AWM — five-stage brief generation over a Nordic UHNW persona."
 requires-python = ">=3.12,<3.14"
 dependencies = [
   "fastapi>=0.115",
