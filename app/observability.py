@@ -1,4 +1,4 @@
-"""OpenTelemetry / Phoenix tracing for the Nordea AWM POC.
+"""OpenTelemetry / Phoenix tracing for the Agentic AWM Advisor.
 
 Architecture note
 -----------------
@@ -65,7 +65,7 @@ def get_tracer() -> trace.Tracer:
     """Return the module-level tracer (falls back to no-op if not initialised)."""
     if _tracer is not None:
         return _tracer
-    return trace.get_tracer("nordea-awm-poc")
+    return trace.get_tracer("agentic-awm-advisor")
 
 
 # ---------------------------------------------------------------------------
@@ -125,7 +125,7 @@ def init_tracing(launch_ui: bool = False) -> None:
         from phoenix.otel import register  # type: ignore[import]
 
         tp = register(
-            project_name="nordea-awm-poc",
+            project_name="agentic-awm-advisor",
             endpoint=collector_endpoint,
             verbose=False,
         )
@@ -141,7 +141,7 @@ def init_tracing(launch_ui: bool = False) -> None:
         )
         trace.set_tracer_provider(tp)
 
-    _tracer = tp.get_tracer("nordea-awm-poc")
+    _tracer = tp.get_tracer("agentic-awm-advisor")
     _initialized = True
 
     # Patch vertex_client.generate with the LLM span wrapper
