@@ -11,7 +11,9 @@ the lru_cache is applied to an inner function that caches the raw text / tuple;
 the public functions return a FRESH object on every call.
 """
 import json
+from datetime import datetime, timezone
 from functools import lru_cache
+from html import escape
 from pathlib import Path
 
 from bs4 import BeautifulSoup
@@ -64,6 +66,29 @@ def load_meeting_notes(client_id: str = "bergstrom") -> list[str]:
     Returns a FRESH list each call to prevent cache-poisoning.
     """
     return list(_meeting_notes_tuple(client_id))
+
+
+def save_meeting_note(client_id: str, text: str) -> Path:
+    """Persist a new advisor meeting note and invalidate the notes cache so the
+    next brief generation includes it. Returns the written file path.
+
+    Notes are stored as the same HTML-wrapped format the loader expects, with a
+    UTC-timestamped filename so they sort chronologically after the seeded notes.
+    User text is HTML-escaped on write; the loader strips tags on read.
+    """
+    ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H%M%S")
+    safe = escape((text or "").strip())
+    path = _DATA / "corpus" / f"{client_id}_meeting_notes_{ts}.html"
+    path.write_text(
+        '<!doctype html><html lang="en"><head><meta charset="utf-8">'
+        f"<title>{escape(client_id)} meeting notes {ts}</title></head><body>"
+        '<div class="eyebrow">AWM &middot; Advisory meeting notes (advisor capture)</div>'
+        f'<div class="meta">Date {ts} &middot; Captured via the after-meeting panel</div>'
+        f"<p>{safe}</p></body></html>",
+        encoding="utf-8",
+    )
+    _meeting_notes_tuple.cache_clear()
+    return path
 
 
 def _html_text(html: str) -> str:
