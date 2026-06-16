@@ -1,7 +1,7 @@
 """Day-1 smoke test: verify Vertex AI auth + both Gemini models respond.
 
 Run from the repo root:  uv run python scripts/smoke_vertex.py
-Expected: two short 'Hello Nordea' replies naming each model.
+Expected: two short 'Hello' replies naming each model.
 """
 import sys
 from pathlib import Path
@@ -17,7 +17,7 @@ def main() -> int:
     ok = True
     for model in (settings.gemini_model_pro, settings.gemini_model_flash):
         try:
-            r = generate(model, "Say 'Hello Nordea' and name the model you are, in one sentence.")
+            r = generate(model, "Say 'Hello' and name the model you are, in one sentence.")
             print(f"[{model}] -> {r.text.strip()}")
         except Exception as e:  # noqa: BLE001
             ok = False
