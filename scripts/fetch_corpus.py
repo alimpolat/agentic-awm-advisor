@@ -1,4 +1,4 @@
-"""Best-effort fetch of the public macro/Nordea RAG corpus.
+"""Best-effort fetch of the public macro/a Nordic private bank RAG corpus.
 
 PDFs are gitignored (large binaries); only this script + data/corpus/SOURCES.html are
 committed, so the corpus is reproducible and source-traceable. Government PDF URLs are
@@ -28,10 +28,10 @@ CORPUS = [
     ("ecb_economic_bulletin_2026.pdf", "https://www.ecb.europa.eu/pub/pdf/ecbu/eb202602.en.pdf",
      "ECB", "Euro-area monetary policy; EU fixed-income duration"),
     ("nordea_annual_report_2024.pdf", "https://www.nordea.com/en/doc/nordea-annual-report-2024.pdf",
-     "Nordea", "House view; AWM product context"),
+     "a Nordic private bank", "House view; AWM product context"),
 ]
 
-HEADERS = {"User-Agent": "Mozilla/5.0 (nordea-awm-poc corpus fetch)", "Accept": "application/pdf,*/*"}
+HEADERS = {"User-Agent": "Mozilla/5.0 (agentic-awm-advisor corpus fetch)", "Accept": "application/pdf,*/*"}
 OUT = Path(__file__).resolve().parents[1] / "data" / "corpus"
 
 
