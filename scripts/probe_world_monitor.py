@@ -37,7 +37,7 @@ PROBES = [
 ]
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (nordea-awm-poc probe)",
+    "User-Agent": "Mozilla/5.0 (agentic-awm-advisor probe)",
     "Origin": BASE,
     "Accept": "application/json, */*",
 }
