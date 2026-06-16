@@ -183,7 +183,7 @@ export default function App() {
       <header className="bg-paper border-b border-gray-300 px-6 py-3">
         <div className="max-w-[1400px] mx-auto flex items-center justify-between">
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-clay">
-            Nordea AWM AI · Advisor Cockpit
+            AWM AI · Advisor Cockpit
           </p>
           {client && (
             <p className="font-serif text-slate text-sm font-semibold">
