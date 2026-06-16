@@ -21,7 +21,7 @@ _SUB_QUESTIONS = [
     "What is the Bergström portfolio's current drift from IPS target allocations?",
     "Are there any IPS compliance breaches (single-position limit, FX floor)?",
     "What are the YTD performance and income figures for the portfolio?",
-    "Are there Nordea green-bond or ESG fixed-income products suited to rebuild the EU FI sleeve?",
+    "Are there a Nordic private bank green-bond or ESG fixed-income products suited to rebuild the EU FI sleeve?",
 ]
 
 # Expected asset classes from the portfolio fixture
