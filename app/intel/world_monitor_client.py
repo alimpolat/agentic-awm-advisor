@@ -52,7 +52,7 @@ def _from_live_market(key: str, blk: dict) -> IntelFinding | None:
 def _try_live(key: str, path: str) -> IntelFinding | None:
     """Attempt a live fetch for one signal. Returns None on any failure (→ caller falls back)."""
     try:
-        headers = {"User-Agent": "nordea-awm-poc", "Origin": settings.world_monitor_base}
+        headers = {"User-Agent": "agentic-awm-advisor", "Origin": settings.world_monitor_base}
         r = httpx.get(
             f"{settings.world_monitor_base}{path}",
             timeout=settings.world_monitor_timeout_s,
@@ -96,7 +96,7 @@ def heartbeat() -> bool:
         r = httpx.get(
             f"{settings.world_monitor_base}/api/version",
             timeout=settings.world_monitor_timeout_s,
-            headers={"User-Agent": "nordea-awm-poc"},
+            headers={"User-Agent": "agentic-awm-advisor"},
         )
         return r.status_code == 200
     except Exception:  # noqa: BLE001
