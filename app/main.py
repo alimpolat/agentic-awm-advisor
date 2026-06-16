@@ -26,7 +26,7 @@ from app.agents import chat
 
 logger = logging.getLogger(__name__)
 
-app = FastAPI(title="Nordea AWM AI POC")
+app = FastAPI(title="Agentic AWM Advisor")
 
 # ---------------------------------------------------------------------------
 # In-memory HITL log (per design §13 "logged in-memory for POC")
@@ -278,4 +278,4 @@ else:
 
     @app.get("/")
     def root():
-        return HTMLResponse("<h1>Nordea AWM AI POC — frontend not built yet</h1>")
+        return HTMLResponse("<h1>Agentic AWM Advisor — frontend not built yet</h1>")
