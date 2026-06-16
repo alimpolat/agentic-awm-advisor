@@ -14,6 +14,7 @@ from typing import Literal
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel
 
 from app.schemas import BriefSchema, ChatRequest, ChatResponse, ClientSnapshot, HitlRequest
 from app.orchestrator import (
@@ -23,6 +24,7 @@ from app.orchestrator import (
     _snapshot_cache_path_for,
 )
 from app.agents import chat
+from app.fixtures import save_meeting_note
 
 logger = logging.getLogger(__name__)
 
@@ -265,6 +267,31 @@ async def post_hitl(
     }
     HITL_LOG.append(entry)
     return {"ok": True, "action": action, "logged": entry, "log_size": len(HITL_LOG)}
+
+
+# ---------------------------------------------------------------------------
+# After-meeting capture — closes the loop (Stage 5)
+# ---------------------------------------------------------------------------
+
+
+class FollowUpRequest(BaseModel):
+    notes: str
+
+
+@app.post("/api/followup/{client_id}")
+async def post_followup(client_id: str, req: FollowUpRequest):
+    """Persist advisor meeting notes, then kick off a background brief regen.
+
+    The saved note becomes client context the next time the brief is generated
+    (consumed by the Client-Insights agent via fixtures.load_meeting_notes),
+    closing the advisor follow-up loop.
+    """
+    note = (req.notes or "").strip()
+    if not note:
+        raise HTTPException(status_code=400, detail="notes must not be empty")
+    path = await asyncio.to_thread(save_meeting_note, client_id, note)
+    asyncio.create_task(_regen_async(client_id))
+    return {"ok": True, "saved": path.name, "regenerating": True}
 
 
 # ---------------------------------------------------------------------------
