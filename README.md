@@ -4,7 +4,7 @@
 
 Every recommendation is cited to a source document and chunk; when the evidence isn't there, the system says **"I don't know"** rather than inventing an answer.
 
-**▶ Live demo:** https://alimpolat-nordea-awm-poc.hf.space &nbsp;·&nbsp; *(Hugging Face Spaces — first load wakes the container, give it a few seconds)*
+**▶ Live demo:** https://alimpolat-agentic-awm-advisor.hf.space &nbsp;·&nbsp; *(Hugging Face Spaces — first load wakes the container, give it a few seconds)*
 
 > Originally built as a private-banking advisor demonstrator (a Nordic UHNW persona). The **engine underneath is domain-agnostic** and maps directly onto institutional investment workflows — due-diligence prep, portfolio & risk monitoring, market-intelligence briefs, and IC-memo drafting. This README is written so an engineer can navigate the design and find the code for each capability quickly.
 
@@ -141,8 +141,8 @@ The same pattern serves portfolio optimisation, risk monitoring, and IC-memo dra
 **Prerequisites:** Python 3.12 + [uv](https://docs.astral.sh/uv/) + a GCP service-account JSON with Vertex AI permissions.
 
 ```bash
-git clone https://github.com/alimpolat/nordea-awm-poc
-cd nordea-awm-poc
+git clone https://github.com/alimpolat/agentic-awm-advisor
+cd agentic-awm-advisor
 uv sync --extra dev
 cp .env.example .env                                  # fill in your own values
 uv run --no-sync python scripts/smoke_vertex.py       # verify Vertex auth
@@ -174,7 +174,7 @@ This is a **proof-of-concept**. The Bergström family office and all associated 
 <summary>Click to expand</summary>
 
 ```
-nordea-awm-poc/
+agentic-awm-advisor/
 ├── app/
 │   ├── main.py               # FastAPI app, /api routes
 │   ├── orchestrator.py       # 5-stage async pipeline (asyncio.gather)
