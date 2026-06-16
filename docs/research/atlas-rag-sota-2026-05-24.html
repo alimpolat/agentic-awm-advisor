@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Atlas Research — SOTA RAG for Nordea POC — 2026-05-24</title>
+<title>Atlas Research — SOTA RAG for a Nordic private bank POC — 2026-05-24</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -111,10 +111,10 @@
 <div class="sheet">
 
   <header class="hero">
-    <div class="eyebrow">Atlas Research · Nordea AWM AI POC · 2026-05-24</div>
-    <h1>State-of-the-Art Production RAG for the Nordea POC</h1>
+    <div class="eyebrow">Atlas Research · Agentic AWM Advisor · 2026-05-24</div>
+    <h1>State-of-the-Art Production RAG for the a Nordic private bank POC</h1>
     <p class="lead">
-      <em>Recommend a defensible 2026 production-grade RAG stack</em> for an 8-day POC targeting the Head of AWM AI role at Nordea. Vertex AI Gemini 2.5 is fixed. No new paid API signups. Single Cloud Run service. Deploy by Thu May 28. Recommendations are opinionated; hedging is none.
+      <em>Recommend a defensible 2026 production-grade RAG stack</em> for an 8-day POC targeting the Head of AWM AI role at a Nordic private bank. Vertex AI Gemini 2.5 is fixed. No new paid API signups. Single Cloud Run service. Deploy by Thu May 28. Recommendations are opinionated; hedging is none.
     </p>
     <div class="metabar">
       <div><strong>Author</strong> · Atlas (research agent)</div>
@@ -126,7 +126,7 @@
 
   <section>
     <div class="section-eyebrow">§ 1 · TL;DR</div>
-    <h2>Recommended stack for the Nordea POC</h2>
+    <h2>Recommended stack for the a Nordic private bank POC</h2>
     <table>
       <thead>
         <tr><th>Layer</th><th>Choice</th><th>Why in one line</th></tr>
@@ -179,7 +179,7 @@
 
     <div class="step">
       <div class="step-header"><div class="step-num">4</div><div class="step-title">GraphRAG hype has compressed</div></div>
-      <div class="step-body"><p>Microsoft's GraphRAG cost $33K to index large corpora; GraphRAG-Bench (ICLR'26) shows it <strong>frequently underperforms vanilla RAG</strong> on real-world tasks. HippoRAG and PathRAG are better on multi-hop reasoning, but <strong>none of them belong in an 8-day POC</strong>. The right answer for Nordea: <em>gesture at</em> graph-augmented retrieval as a future direction, not build it.</p></div>
+      <div class="step-body"><p>Microsoft's GraphRAG cost $33K to index large corpora; GraphRAG-Bench (ICLR'26) shows it <strong>frequently underperforms vanilla RAG</strong> on real-world tasks. HippoRAG and PathRAG are better on multi-hop reasoning, but <strong>none of them belong in an 8-day POC</strong>. The right answer for a Nordic private bank: <em>gesture at</em> graph-augmented retrieval as a future direction, not build it.</p></div>
     </div>
 
     <div class="step">
@@ -211,7 +211,7 @@
       <li>Jerry Liu's most recent (May 2026) framing: <em>"Building RAG 2.0 is just making Claude Code running over your filesystem."</em> Agentic loops over a virtualized filesystem with file-tools replacing static retrieval indices for code-style workloads (<a href="https://x.com/jerryjliu0/status/2000677592559706396">Jerry Liu, May 2026</a>).</li>
       <li>2026 industry analysis: <em>"Coding agents have disrupted the core value of RAG frameworks — when AI can generate custom pipelines on demand, pre-packaged abstractions lose their appeal, and MCP has standardized tool integration."</em> (<a href="https://www.mindstudio.ai/blog/llm-frameworks-replaced-by-agent-sdks">MindStudio</a>).</li>
     </ul>
-    <p><strong>For Nordea POC:</strong> Use LlamaIndex Workflows for ingestion/retrieval (mature, well-named for a banking audience, existing codebase uses it). Wrap with a 200-line async FastAPI orchestrator hand-rolled with Pydantic models for agent state. <strong>Do not introduce LangGraph in 8 days</strong> — hard to learn, harder to debug, zero demo value-add over async-await for the visible workflow.</p>
+    <p><strong>For a Nordic private bank POC:</strong> Use LlamaIndex Workflows for ingestion/retrieval (mature, well-named for a banking audience, existing codebase uses it). Wrap with a 200-line async FastAPI orchestrator hand-rolled with Pydantic models for agent state. <strong>Do not introduce LangGraph in 8 days</strong> — hard to learn, harder to debug, zero demo value-add over async-await for the visible workflow.</p>
 
     <h3>Q2 — Embedding models: who wins for finance?</h3>
     <div class="infobox"><strong>Verdict:</strong> <code>gemini-embedding-001</code> (Vertex AI). Full stop.</div>
@@ -228,7 +228,7 @@
       <div class="chart-eyebrow">Figure 3 · MTEB v2 English leaderboard</div>
       <div class="chart-title">Top embedding models, May 2026</div>
       <div id="chart-mteb" class="chart-canvas"></div>
-      <div class="chart-caption">Source: MTEB v2 English leaderboard · gemini-embedding-001 is the highest-scoring model without a paid API key for the Nordea POC</div>
+      <div class="chart-caption">Source: MTEB v2 English leaderboard · gemini-embedding-001 is the highest-scoring model without a paid API key for the a Nordic private bank POC</div>
     </div>
 
     <div class="chart-wrap">
@@ -246,10 +246,10 @@
       <li>The 2026 vector DB market has consolidated: Qdrant, pgvector, LanceDB, Chroma, Weaviate are all production-viable; Pinecone increasingly seen as overpriced; Milvus enterprise-heavy (<a href="https://4xxi.com/articles/vector-database-comparison/">4xxi 2026</a>, <a href="https://www.marktechpost.com/2026/05/10/best-vector-databases-in-2026-pricing-scale-limits-and-architecture-tradeoffs-across-nine-leading-systems/">MarkTechPost 2026</a>).</li>
       <li><strong>Chroma</strong> still wins for sub-1M-vector prototypes but is <strong>increasingly read as a "I built this in 2024" signal</strong> by senior reviewers. Avoid for a senior-leader demo.</li>
       <li><strong>Qdrant</strong> is the explicit 2026 recommendation for "building legal or financial AI with complex filtering" — JSON-payload filtering is the production differentiator the moment you filter by client / asset class / date / restricted-list status (<a href="https://callsphere.ai/blog/vector-database-benchmarks-2026-pgvector-qdrant-weaviate-milvus-lancedb">CallSphere 2026</a>).</li>
-      <li><strong>pgvector 0.9</strong> is the right long-term answer for Nordea (banking already runs Postgres). For 8 days, Qdrant has lower friction.</li>
-      <li><strong>Vertex AI Vector Search</strong> is the GCP-native option and what production Nordea would use. But endpoint provisioning takes 30-60 min per change — iteration burn. Use Qdrant for POC, namedrop Vector Search as the production migration path.</li>
+      <li><strong>pgvector 0.9</strong> is the right long-term answer for a Nordic private bank (banking already runs Postgres). For 8 days, Qdrant has lower friction.</li>
+      <li><strong>Vertex AI Vector Search</strong> is the GCP-native option and what production a Nordic private bank would use. But endpoint provisioning takes 30-60 min per change — iteration burn. Use Qdrant for POC, namedrop Vector Search as the production migration path.</li>
     </ul>
-    <p><strong>For Nordea POC:</strong> <code>docker run -p 6333:6333 qdrant/qdrant</code>. Single collection, gemini-embedding-001 vectors at 768 dims, payload schema:</p>
+    <p><strong>For a Nordic private bank POC:</strong> <code>docker run -p 6333:6333 qdrant/qdrant</code>. Single collection, gemini-embedding-001 vectors at 768 dims, payload schema:</p>
     <pre>{
   "asset_class": str,
   "doc_type":    str,
@@ -266,9 +266,9 @@
       <li><strong>Hybrid</strong> is mandatory for finance corpora — tickers, ISINs, named clients, fund codes all favor BM25/sparse. Recall typically jumps from ~0.72 to ~0.91.</li>
       <li><strong>ColBERT / late interaction</strong> is sexy but <strong>not table stakes for a 50-doc POC</strong>. ColBERT's edge appears at scale and with long chunks; for 50 docs the operational complexity outweighs the gain. Verdict: <em>"A dense model followed by a cross-encoder reranker recovers most of ColBERT's quality advantage with a more standard stack"</em> (<a href="https://medium.com/@2nick2patel2/colbert-and-friends-re-ranking-that-feels-instant-6c09102b7526">Codastra/Medium</a>).</li>
       <li><strong>GraphRAG / HippoRAG / PathRAG</strong>: Skip for the POC. GraphRAG-Bench (ICLR'26) shows these "frequently underperform vanilla RAG on real-world tasks" while costing 10-100x more to index (<a href="https://arxiv.org/html/2506.05690v3">arxiv 2506.05690</a>). Gesture at it as "phase 2."</li>
-      <li><strong>Reranking is non-negotiable.</strong> Either cross-encoder (<code>bge-reranker-v2-m3</code> OSS leader, free) or LLM-as-reranker (Gemini 2.5 Flash listwise, ~$0.0001/query). For Nordea: use Gemini Flash listwise — fewer moving parts, no model download, native to stack.</li>
+      <li><strong>Reranking is non-negotiable.</strong> Either cross-encoder (<code>bge-reranker-v2-m3</code> OSS leader, free) or LLM-as-reranker (Gemini 2.5 Flash listwise, ~$0.0001/query). For a Nordic private bank: use Gemini Flash listwise — fewer moving parts, no model download, native to stack.</li>
     </ul>
-    <p><strong>For Nordea POC pipeline (5 stages):</strong></p>
+    <p><strong>For a Nordic private bank POC pipeline (5 stages):</strong></p>
     <ol>
       <li>Query → Gemini 2.5 Flash <strong>query rewriter</strong> (resolves "Bergström" → "Bergström Family Office" + extracts intent)</li>
       <li>Parallel: (a) dense retrieval over Qdrant (gemini-embedding-001, top 30), (b) BM25 over same chunks (top 30)</li>
@@ -281,11 +281,11 @@
     <div class="infobox"><strong>Verdict:</strong> Anthropic's orchestrator-subagent pattern, scaled down to 1 + 3 + 1.</div>
     <ul>
       <li>Anthropic published the canonical 2025-2026 reference on multi-agent research systems: lead agent maintains plan in external memory, spawns parallel subagents with clear objectives + output formats + tool guidance, subagents work independently and return findings, lead synthesizes (<a href="https://www.anthropic.com/engineering/multi-agent-research-system">Anthropic Engineering</a>). Key finding: <strong>token usage explains 80% of performance variance</strong> — parallel subagents win because they distribute context, not because they're "smarter."</li>
-      <li>The 2026 enterprise consensus is the <strong>five patterns</strong> taxonomy: router, ReAct, plan-and-execute, multi-agent retrieval, self-RAG. ReAct dominates for single-agent flows; multi-agent retrieval shines on "heterogeneous sources" — exactly the Nordea case: docs + financial data + news (<a href="https://heeya.fr/en/blog/agentic-rag-implementation-enterprise-2026">Heeya 2026 Agentic RAG Guide</a>).</li>
+      <li>The 2026 enterprise consensus is the <strong>five patterns</strong> taxonomy: router, ReAct, plan-and-execute, multi-agent retrieval, self-RAG. ReAct dominates for single-agent flows; multi-agent retrieval shines on "heterogeneous sources" — exactly the a Nordic private bank case: docs + financial data + news (<a href="https://heeya.fr/en/blog/agentic-rag-implementation-enterprise-2026">Heeya 2026 Agentic RAG Guide</a>).</li>
       <li>Jason Liu's framing (sunsetting his 567 Labs courses Feb 2026): the flywheel is <strong>ship → log → segment → specialize</strong>. He warns that in most RAG contexts, <em>recall</em> is the headache, not generation (<a href="https://jxnl.co/writing/2025/01/24/systematically-improving-rag-applications/">Jason Liu, Jan 2025</a>).</li>
       <li>2026 critical failure modes for multi-agent: excessive subagent spawning, duplicated work, context overflow. All have known mitigations (scaling rules, boundary descriptions, fresh subagent contexts).</li>
     </ul>
-    <p><strong>For Nordea POC architecture:</strong></p>
+    <p><strong>For a Nordic private bank POC architecture:</strong></p>
     <div class="diagram">
       <svg viewBox="0 0 940 600" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, ui-monospace, monospace" font-size="11">
         <!-- User query -->
@@ -402,7 +402,7 @@
       <li><strong>TruLens</strong> is fine but has lost mindshare to Ragas since mid-2025. No advantage for banking audience.</li>
       <li><strong>Hamel's overlay</strong>: binary pass/fail beats 1-5 scales; pair each pass/fail with a critique; validate LLM-judge alignment with human judgment before trusting metrics. For 8 days, aim ~80% alignment, not 95% (<a href="https://hamel.dev/blog/posts/field-guide/index.html">Hamel Field Guide</a>).</li>
     </ul>
-    <p><strong>For Nordea POC eval plan:</strong></p>
+    <p><strong>For a Nordic private bank POC eval plan:</strong></p>
     <ol>
       <li>Generate 30 synthetic questions from your 50-doc corpus using Gemini Pro (5 per chunk type, segmented by intent: lookup / multi-hop / quantitative / contextual / news).</li>
       <li>Hand-review and fix the 30. Mark expected source chunks.</li>
@@ -419,7 +419,7 @@
       <li><strong>Long context (1M tokens) — use sparingly.</strong> Recent research: agentic capabilities degrade &gt;50% past 100K tokens (<a href="https://arxiv.org/pdf/2505.20625">Long-context degradation research</a>). Don't try to stuff the whole Bergström history. Use it for: "load the IPS document fully into the synthesizer's context, RAG everything else."</li>
       <li><strong>Code execution + function calling.</strong> Gemini 2.5 Pro has native code execution. For portfolio math (weighted YTD return, VaR), use code execution rather than expecting the LLM to do arithmetic. AWM-relevant differentiator vs a generic chatbot.</li>
     </ol>
-    <p><strong>Where Gemini loses vs Claude/GPT:</strong> Tool-use loops slightly clunkier than Claude's native tool blocks. Function-calling JSON sometimes drifts. Mitigation: enforce schemas, validate with Pydantic, retry on parse failure. <strong>Where Gemini wins:</strong> native Search grounding (Claude has nothing equivalent), native code execution, top MTEB embeddings in same SDK, 1M context, and the killer for Nordea — <strong>it's already approved on their cloud-provider list if they're a GCP shop</strong>.</p>
+    <p><strong>Where Gemini loses vs Claude/GPT:</strong> Tool-use loops slightly clunkier than Claude's native tool blocks. Function-calling JSON sometimes drifts. Mitigation: enforce schemas, validate with Pydantic, retry on parse failure. <strong>Where Gemini wins:</strong> native Search grounding (Claude has nothing equivalent), native code execution, top MTEB embeddings in same SDK, 1M context, and the killer for a Nordic private bank — <strong>it's already approved on their cloud-provider list if they're a GCP shop</strong>.</p>
 
     <h3>Q8 — What's overhyped / NOT worth chasing in 8 days</h3>
     <div class="infobox rust"><strong>Skip these. Hard.</strong></div>
@@ -478,7 +478,7 @@
       <li><strong>Don't use LangChain.</strong> Signals "started this in 2023." LlamaIndex Workflows reads more current.</li>
       <li><strong>Don't demo on a flaky network.</strong> Bake corpus into the container, run locally in the meeting, screen-share Cloud Run separately as deployment proof.</li>
       <li><strong>Don't let the synthesizer hallucinate quantities.</strong> Force quantitative answers through <code>code_execution()</code> tool calls. Show the code in the citation drawer.</li>
-      <li><strong>Don't oversell agentic-ness.</strong> "Multi-agent" is a buzzword Nordea has heard 50 times this year. Frame as: <em>"Parallel specialists with bounded scope and structured handoffs — same pattern Anthropic shipped for their research product."</em> Cite Anthropic explicitly. Borrowed credibility.</li>
+      <li><strong>Don't oversell agentic-ness.</strong> "Multi-agent" is a buzzword a Nordic private bank has heard 50 times this year. Frame as: <em>"Parallel specialists with bounded scope and structured handoffs — same pattern Anthropic shipped for their research product."</em> Cite Anthropic explicitly. Borrowed credibility.</li>
     </ol>
   </section>
 
