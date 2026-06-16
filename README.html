@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nordea AWM AI POC — README</title>
+<title>Agentic AWM Advisor — README</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -116,7 +116,7 @@
   <div class="sheet">
     <span class="tb-label">Live demo</span>
     <span class="tb-text">
-      <a href="https://alimpolat-nordea-awm-poc.hf.space" target="_blank" rel="noopener">https://alimpolat-nordea-awm-poc.hf.space</a>
+      <a href="https://alimpolat-agentic-awm-advisor.hf.space" target="_blank" rel="noopener">https://alimpolat-agentic-awm-advisor.hf.space</a>
       &nbsp;&mdash; Hugging Face Spaces · free tier · no card required
     </span>
     <span class="tb-note">Production target: EU-region Cloud Run &rarr; see infobox below</span>
@@ -126,12 +126,12 @@
 <div class="sheet">
 
 <header class="hero">
-  <div class="eyebrow">Nordea AWM AI POC · Agentic Advisor-Flow Cockpit</div>
+  <div class="eyebrow">Agentic AWM Advisor · Agentic Advisor-Flow Cockpit</div>
   <h1>Agentic advisor-flow<br>for private banking</h1>
   <p class="lead">
     A <strong>five-stage agentic system</strong> that drafts a private-banking Monday brief for the
     <strong>Bergström family office</strong> (fictitious Nordic UHNW, SEK 480M, global tilt).
-    Built as a demonstrator for the Nordea Head-of-AWM-AI mandate — from opportunity identification
+    Built as a demonstrator for the asset & wealth management advisor mandate — from opportunity identification
     and client insights through meeting preparation, grounded recommendations, and follow-up capture.
     Every next-best-action is cited; every uncertainty says "I don't know."
   </p>
@@ -259,7 +259,7 @@
 
   <h3>Install &amp; start</h3>
 <pre>git clone &lt;this repo&gt;
-cd nordea-awm-poc
+cd agentic-awm-advisor
 
 # install deps (uv resolves from uv.lock)
 uv sync --extra dev
@@ -304,7 +304,7 @@ uv run --no-sync pytest -m "not live" -q</pre>
 <section>
   <div class="section-eyebrow">Repository</div>
   <h2>File structure</h2>
-<pre>nordea-awm-poc/
+<pre>agentic-awm-advisor/
 ├── app/
 │   ├── main.py               # FastAPI app, /api routes
 │   ├── orchestrator.py       # LlamaIndex Workflows — 5-stage runner
@@ -367,19 +367,18 @@ uv run --no-sync pytest -m "not live" -q</pre>
         <tr><td><a href="ARCHITECTURE.html">ARCHITECTURE.html</a></td><td>System design: single-container shape, animated 5-stage flow diagram, retrieval pipeline, model routing table, decisions log</td></tr>
         <tr><td><a href="EVAL.html">EVAL.html</a></td><td>Evaluation trust receipt: recall@5 0.909 / faithfulness 0.963 / answer-relevancy 1.000 · per-intent breakdown · Phoenix trace · hand review</td></tr>
         <tr><td><a href="docs/Architecture_Flow_2026-05-25.html">docs/Architecture_Flow_2026-05-25.html</a></td><td>Original architecture flow doc with ECharts latency &amp; cost charts</td></tr>
-        <tr><td><a href="docs/2026-05-24-nordea-awm-ai-poc-design.html">docs/2026-05-24-nordea-awm-ai-poc-design.html</a></td><td>Full 22-section design specification</td></tr>
         <tr><td><a href="eval/results/hand_review.html">eval/results/hand_review.html</a></td><td>RAG hand review: worst/best/unanswerable sampled rows</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="infobox rust">
-    <strong>POC status.</strong> This is a proof-of-concept built for evaluation purposes. The Bergström family office and all associated data are entirely fictitious. The system is not connected to any live financial data or production Nordea systems.
+    <strong>POC status.</strong> This is a proof-of-concept built for evaluation purposes. The Bergström family office and all associated data are entirely fictitious. The system is not connected to any live financial data or production banking systems.
   </div>
 </section>
 
 <footer>
-  <div>Nordea AWM AI POC · README · 2026-05-26 · Alim Polat</div>
+  <div>Agentic AWM Advisor · README · 2026-05-26 · Alim Polat</div>
   <div>Python 3.12 · FastAPI · Vertex AI Gemini 2.5 · Qdrant · LlamaIndex</div>
 </footer>
 
