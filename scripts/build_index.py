@@ -1,6 +1,6 @@
 """build_index.py — AWM corpus index builder.
 
-Orchestrates end-to-end ingestion for the Nordea AWM AI POC:
+Orchestrates end-to-end ingestion for the Agentic AWM Advisor:
   1. Scans data/corpus/ for .html and .pdf files.
   2. Parses HTML (BeautifulSoup) and PDF (pypdf, first MAX_PDF_PAGES pages).
   3. Chunks each document with the sentence-aware chunker.
