@@ -67,7 +67,7 @@ NEVER commit the key file to the repo.
 
 ### 4. Push to HF Spaces
   git add .
-  git commit -m "deploy: Nordea AWM AI Advisor Cockpit"
+  git commit -m "deploy: AWM AI Advisor Cockpit"
   git push
 
 HF will start a Docker build automatically. Build takes approximately 5-8 minutes
