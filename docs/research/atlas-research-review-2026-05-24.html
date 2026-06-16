@@ -116,7 +116,7 @@
     <div class="eyebrow">Independent Peer Review · Atlas RAG SOTA Research · 2026-05-24</div>
     <h1>Adversarial Review of the Atlas RAG Research</h1>
     <p class="lead">
-      An <em>independent, hostile-by-design</em> stress-test of the Atlas research that recommends the Nordea AWM POC stack. I did not write the research. The job is to find where it would embarrass Alim in front of a Tier-1-bank Head of AI — not to rubber-stamp it. <strong>The headline section is "Claims that MUST be human-verified":</strong> every benchmark number and citation that, if wrong, becomes a credibility crater.
+      An <em>independent, hostile-by-design</em> stress-test of the Atlas research that recommends the Agentic AWM Advisor stack. I did not write the research. The job is to find where it would embarrass Alim in front of a Tier-1-bank Head of AI — not to rubber-stamp it. <strong>The headline section is "Claims that MUST be human-verified":</strong> every benchmark number and citation that, if wrong, becomes a credibility crater.
     </p>
     <div class="metabar">
       <div><strong>Reviewer</strong> · Independent staff AI/ML engineer</div>
@@ -130,7 +130,7 @@
     <div class="section-eyebrow">§ 0 · Overall verdict</div>
     <h2>Ship with fixes</h2>
     <div class="infobox amber">
-      <strong>Ship with fixes.</strong> The architecture this research recommends is correct, current, and defensible — the directional calls (agentic-RAG over naive, hybrid + contextual + rerank, Gemini-native everything, skip GraphRAG/ColBERT/LangGraph for 8 days) are exactly what a competent 2026 engineer would land on, and the "skip" list is the strongest part of the document. <strong>But it is unsafe to cite verbatim to Nordea.</strong> It mixes hard-verifiable benchmark numbers (MTEB 68.32, "49%/67% failure reduction", recall 0.72→0.91) with at least one number the document itself invented (Figure 4's 0.81 dense / 0.91 hybrid is presented as a "finance corpus benchmark" with no traceable source), several citations that look synthetic (URLs with future dates, an arbitrarily long tweet-ID), and one technical claim that directly contradicts the spec it produced (Qdrant "local Docker" in the research vs "Qdrant embedded in-process" in the spec — a real deployment-model question the research never resolved). Fix the citations and the embedded-mode question, soften the invented benchmarks to "directional", and it ships.
+      <strong>Ship with fixes.</strong> The architecture this research recommends is correct, current, and defensible — the directional calls (agentic-RAG over naive, hybrid + contextual + rerank, Gemini-native everything, skip GraphRAG/ColBERT/LangGraph for 8 days) are exactly what a competent 2026 engineer would land on, and the "skip" list is the strongest part of the document. <strong>But it is unsafe to cite verbatim to a Nordic private bank.</strong> It mixes hard-verifiable benchmark numbers (MTEB 68.32, "49%/67% failure reduction", recall 0.72→0.91) with at least one number the document itself invented (Figure 4's 0.81 dense / 0.91 hybrid is presented as a "finance corpus benchmark" with no traceable source), several citations that look synthetic (URLs with future dates, an arbitrarily long tweet-ID), and one technical claim that directly contradicts the spec it produced (Qdrant "local Docker" in the research vs "Qdrant embedded in-process" in the spec — a real deployment-model question the research never resolved). Fix the citations and the embedded-mode question, soften the invented benchmarks to "directional", and it ships.
     </div>
   </section>
 
@@ -206,7 +206,7 @@
 
   <section>
     <div class="section-eyebrow">§ 3 · The headline section</div>
-    <h2>Claims that MUST be human-verified before this goes to Nordea</h2>
+    <h2>Claims that MUST be human-verified before this goes to a Nordic private bank</h2>
     <p>Every item below is a specific factual assertion that, if wrong, embarrasses Alim in front of the hiring manager. <span class="pill rust">Verify-hard</span> = do not cite until confirmed against a primary source. <span class="pill amber">Hedge</span> = real direction but soften the number / attribute the source.</p>
 
     <div class="claim">
@@ -299,7 +299,7 @@
   <section>
     <div class="section-eyebrow">§ 6 · Bottom line</div>
     <h2>One paragraph</h2>
-    <p>This is good research with a citation-hygiene problem. The thinking is current, the architecture is correct, the restraint is professional, and it generated a buildable spec — Alim can and should build essentially this POC. The danger is not the engineering; it's that the document launders several invented or unverifiable numbers (the Figure 4 finance-recall benchmark, the absolute-failure-rate chart, exact MTEB decimals) and at least one fabricated-looking citation (the 19-digit Jerry Liu tweet, the <code>docs.cloud.google.com</code> host) with the same confident tone as its solid primary sources. A Tier-1-bank Head of AI greps for exactly these. <strong>Before anything in this research is quoted to Nordea, Alim must (1) verify or delete every flagged claim in §3, (2) resolve the Qdrant embedded-vs-Docker question with a real test, and (3) add the data-residency, prompt-injection, latency, and brief-quality-eval paragraphs from §4.</strong> Do that and the research is a credible appendix that proves "stays current with emerging AI." Skip it and a single dead link or wrong decimal hands the CTO a reason to discount the whole package. Verdict: <strong>Ship with fixes.</strong></p>
+    <p>This is good research with a citation-hygiene problem. The thinking is current, the architecture is correct, the restraint is professional, and it generated a buildable spec — Alim can and should build essentially this POC. The danger is not the engineering; it's that the document launders several invented or unverifiable numbers (the Figure 4 finance-recall benchmark, the absolute-failure-rate chart, exact MTEB decimals) and at least one fabricated-looking citation (the 19-digit Jerry Liu tweet, the <code>docs.cloud.google.com</code> host) with the same confident tone as its solid primary sources. A Tier-1-bank Head of AI greps for exactly these. <strong>Before anything in this research is quoted to a Nordic private bank, Alim must (1) verify or delete every flagged claim in §3, (2) resolve the Qdrant embedded-vs-Docker question with a real test, and (3) add the data-residency, prompt-injection, latency, and brief-quality-eval paragraphs from §4.</strong> Do that and the research is a credible appendix that proves "stays current with emerging AI." Skip it and a single dead link or wrong decimal hands the CTO a reason to discount the whole package. Verdict: <strong>Ship with fixes.</strong></p>
   </section>
 
   <footer>
