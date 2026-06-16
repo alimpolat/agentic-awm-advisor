@@ -146,7 +146,7 @@ def _print_summary(brief: BriefSchema, elapsed: float) -> None:
     """Print a human-readable brief summary to stdout."""
     print()
     print("=" * 70)
-    print("  NORDEA AWM -- MONDAY BRIEF SUMMARY")
+    print("  AWM -- MONDAY BRIEF SUMMARY")
     print("=" * 70)
     print(f"  client_id     : {brief.client_id}")
     print(f"  generated_at  : {brief.generated_at.isoformat()}")
