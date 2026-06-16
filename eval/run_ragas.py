@@ -1,6 +1,6 @@
 """eval/run_ragas.py — Ragas evaluation with Gemini judge.
 
-Task 5.3: Two-layer evaluation of the Nordea AWM RAG pipeline.
+Task 5.3: Two-layer evaluation of the AWM RAG pipeline.
 
 Layer 1 — Deterministic retrieval recall@5 (no LLM, always works).
 Layer 2 — Ragas metrics with Gemini Flash judge + VertexAI embeddings
@@ -626,7 +626,7 @@ def build_hand_review_html(
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nordea AWM POC · RAG Eval Hand Review · 2026-05-26</title>
+<title>Agentic AWM Advisor · RAG Eval Hand Review · 2026-05-26</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -703,7 +703,7 @@ def build_hand_review_html(
 <div class="sheet">
 
 <header class="hero">
-  <div class="eyebrow">Nordea AWM AI POC · Task 5.3</div>
+  <div class="eyebrow">Agentic AWM Advisor · Task 5.3</div>
   <h1>RAG Evaluation Hand Review</h1>
   <p class="lead">
     Two-layer evaluation of the Bergström hybrid retrieval pipeline.<br>
@@ -812,7 +812,7 @@ def build_hand_review_html(
 # ═══════════════════════════════════════════════════════════════════════════
 
 def main() -> None:
-    logger.info("=== Nordea AWM POC · Ragas Eval (Task 5.3) ===")
+    logger.info("=== Agentic AWM Advisor · Ragas Eval (Task 5.3) ===")
     t0 = time.time()
 
     # Step 0 — Load questions
@@ -865,7 +865,7 @@ def main() -> None:
     ctx_rec = (ragas_scores or {}).get("context_recall")
 
     print("\n" + "=" * 70)
-    print("NORDEA AWM POC — RAGAS EVAL RESULTS")
+    print("AWM POC — RAGAS EVAL RESULTS")
     print("=" * 70)
     print(f"Judge path : {judge_path}")
     print(f"Elapsed    : {elapsed:.0f}s\n")
