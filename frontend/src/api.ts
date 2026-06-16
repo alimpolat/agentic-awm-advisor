@@ -56,6 +56,23 @@ export function postHitl(
   });
 }
 
+export interface FollowUpResponse {
+  ok: boolean;
+  saved: string;
+  regenerating: boolean;
+}
+
+/** Persist after-meeting notes; server regenerates the brief in the background. */
+export function postFollowUp(
+  clientId: string,
+  notes: string
+): Promise<FollowUpResponse> {
+  return apiFetch<FollowUpResponse>(`/api/followup/${clientId}`, {
+    method: "POST",
+    body: JSON.stringify({ notes }),
+  });
+}
+
 export interface TrendSeries {
   closes: number[];
   source: "live" | "unavailable";
