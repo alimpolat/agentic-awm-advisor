@@ -117,7 +117,7 @@ function Cockpit({
           </div>
 
           <RiskFlags flags={brief.risk_flags} />
-          <FollowUpPanel />
+          <FollowUpPanel clientId={CLIENT_ID} />
           <AgentMonitor clientId={CLIENT_ID} onPipelineComplete={onRefresh} />
         </div>
 
