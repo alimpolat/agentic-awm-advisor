@@ -8,7 +8,7 @@ Design decisions
   compliance, and YTD return deterministically in Python avoids the known
   conflict between Gemini's code_execution tool and a response_schema
   structured-output request.  The model is only asked to produce the
-  interpretive `opportunities` list, grounded in retrieved Nordea/ESG docs.
+  interpretive `opportunities` list, grounded in retrieved a Nordic private bank/ESG docs.
 * The async interface uses asyncio.to_thread so the orchestrator can gather
   all Stage-3 specialists in parallel without blocking the event loop.
 * Fund/ETF/Trust positions are exempted from the single-position check via a
@@ -46,7 +46,7 @@ _CHUNK_TEXT_MAX_CHARS = 500
 _FUND_KEYWORDS = ("ETF", "Fund", "Trust")
 
 _OPPORTUNITY_SEED_QUERIES = [
-    "Nordea green bond fund offerings EU fixed income",
+    "a Nordic private bank green bond fund offerings EU fixed income",
     "ESG fixed income sustainable bonds Nordic investor",
 ]
 
@@ -404,7 +404,7 @@ def _build_contents(
         "should:",
         "  1. Reference a specific drift or IPS finding (use the computed numbers above).",
         "  2. Suggest a concrete rebalancing action (e.g. trim overweight → fund underweight).",
-        "  3. Where possible, name a specific Nordea product or doc from the retrieved chunks.",
+        "  3. Where possible, name a specific a Nordic private bank product or doc from the retrieved chunks.",
         "",
         "For the other fields (drift_signals, ips_compliance, ytd_summary, computation_trace) "
         "you MUST return empty lists / null — those are filled from the Python computation.",
