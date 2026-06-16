@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
-<title>Nordea AWM POC — RAG Corpus Sources</title>
+<title>Agentic AWM Advisor — RAG Corpus Sources</title>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
 body{background:#FAF9F5;color:#141413;font-family:'Newsreader',Georgia,serif;font-size:16px;line-height:1.6;max-width:900px;margin:40px auto;padding:0 24px}
@@ -16,7 +16,7 @@ code{font-family:'JetBrains Mono',monospace;font-size:12px}
 .ok{background:rgba(120,140,93,.16);color:#5d6e45}.pend{background:rgba(199,163,95,.18);color:#8C7038}
 .box{background:rgba(120,140,93,.10);border-left:3px solid #788C5D;padding:12px 16px;margin:16px 0;font-size:14px}
 </style></head><body>
-<div class="eyebrow">Nordea AWM AI POC · RAG corpus manifest</div>
+<div class="eyebrow">Agentic AWM Advisor · RAG corpus manifest</div>
 <h1>Corpus sources &amp; provenance</h1>
 <div class="meta">The corpus the agents retrieve over. PDFs are gitignored (large binaries); re-fetch with <code>uv run python scripts/fetch_corpus.py</code>. Client fixtures are committed HTML.</div>
 
@@ -42,7 +42,7 @@ code{font-family:'JetBrains Mono',monospace;font-size:12px}
 <tr><td>BIS Quarterly Review Q4 2025</td><td>BIS</td><td><span class="pill ok">fetched</span></td><td><code>bis.org/publ/qtrpdf/r_qt2512.pdf</code></td></tr>
 <tr><td>IMF World Economic Outlook, Apr 2026</td><td>IMF</td><td><span class="pill ok">fetched</span></td><td><code>imf.org/.../WEO/2026/April/English/text.ashx</code></td></tr>
 <tr><td>ECB Economic Bulletin 2026</td><td>ECB</td><td><span class="pill ok">fetched</span></td><td><code>ecb.europa.eu/pub/pdf/ecbu/eb202602.en.pdf</code></td></tr>
-<tr><td>Nordea Annual Report 2024</td><td>Nordea</td><td><span class="pill pend">URL pending</span></td><td>nordea.com/en/investors — drop PDF into <code>data/corpus/</code> manually</td></tr>
+<tr><td>a Nordic private bank Annual Report 2024</td><td>a Nordic private bank</td><td><span class="pill pend">URL pending</span></td><td>nordea.com/en/investors — drop PDF into <code>data/corpus/</code> manually</td></tr>
 </tbody>
 </table>
 
