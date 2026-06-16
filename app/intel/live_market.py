@@ -158,7 +158,7 @@ def fx_rate(base: str, quote: str, timeout: float = 4.0) -> Optional[float]:
         r = httpx.get(
             "https://api.frankfurter.app/latest",
             params={"base": base, "symbols": quote},
-            headers={"User-Agent": "nordea-awm-poc"},
+            headers={"User-Agent": "agentic-awm-advisor"},
             timeout=timeout,
         )
         r.raise_for_status()
