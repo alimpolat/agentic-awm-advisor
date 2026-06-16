@@ -1,5 +1,5 @@
 ---
-title: Nordea AWM AI Advisor Cockpit
+title: AWM AI Advisor Cockpit
 emoji: 📊
 colorFrom: indigo
 colorTo: gray
@@ -8,7 +8,7 @@ app_port: 8080
 pinned: false
 ---
 
-# Nordea AWM AI — Advisor Cockpit (POC)
+# AWM AI — Advisor Cockpit (POC)
 
 Agentic advisor-flow demo over a fictitious Nordic UHNW family office. FastAPI + LlamaIndex
 + Vertex AI Gemini 2.5 (Pro/Flash) + embedded Qdrant hybrid retrieval, React + ECharts cockpit.
