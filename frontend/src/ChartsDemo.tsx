@@ -138,7 +138,7 @@ export default function ChartsDemo() {
             margin: "0 0 6px",
           }}
         >
-          Nordea AWM AI · Chart Library
+          AWM AI · Chart Library
         </p>
         <h1 style={{ fontSize: 28, fontWeight: 600, color: "#141413", margin: "0 0 4px" }}>
           ECharts House Theme — Visual Review
