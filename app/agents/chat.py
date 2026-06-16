@@ -100,7 +100,7 @@ def _run_sync(req: ChatRequest) -> ChatResponse:
     # ── Tool definitions (closures that share the `refs` collector) ──────────
 
     def retrieve_from_corpus(query: str) -> str:
-        """Search the macro + Nordea + Bergstrom document corpus for relevant passages."""
+        """Search the macro + a Nordic private bank + Bergstrom document corpus for relevant passages."""
         try:
             chunks = retrieve(query, top_k=5)
         except Exception as exc:  # noqa: BLE001
@@ -382,7 +382,7 @@ def _manual_react(
             types.Tool(function_declarations=[
                 types.FunctionDeclaration(
                     name="retrieve_from_corpus",
-                    description="Search the macro + Nordea + Bergstrom document corpus for relevant passages.",
+                    description="Search the macro + a Nordic private bank + Bergstrom document corpus for relevant passages.",
                     parameters=types.Schema(
                         type=types.Type.OBJECT,
                         properties={"query": types.Schema(type=types.Type.STRING)},
