@@ -4,8 +4,8 @@
   "mandate": "Advisory",
   "domicile": "Stockholm, Sweden",
   "base_currency": "SEK",
-  "aum_sek": 479857590,
-  "as_of": "2026-06-10",
+  "aum_sek": 481843043,
+  "as_of": "2026-06-17",
   "last_meeting_date": "2026-05-26",
   "single_position_limit_pct": 5.0,
   "fx_floor_pct": 60.0,
@@ -31,8 +31,8 @@
       "asset_class": "Nordic equity",
       "quantity": 95300,
       "cost_basis": 27000000,
-      "current_mv": 35999575,
-      "ytd_return_pct": 15.9,
+      "current_mv": 36485606,
+      "ytd_return_pct": 17.5,
       "dividend_ytd": 1020000,
       "fx_exposure": "SEK"
     },
@@ -42,8 +42,8 @@
       "asset_class": "Nordic equity",
       "quantity": 178500,
       "cost_basis": 24500000,
-      "current_mv": 31996125,
-      "ytd_return_pct": 6.9,
+      "current_mv": 33593699,
+      "ytd_return_pct": 12.2,
       "dividend_ytd": 430000,
       "fx_exposure": "SEK"
     },
@@ -53,8 +53,8 @@
       "asset_class": "Nordic equity",
       "quantity": 87800,
       "cost_basis": 23000000,
-      "current_mv": 27999419,
-      "ytd_return_pct": 7.1,
+      "current_mv": 28113561,
+      "ytd_return_pct": 7.5,
       "dividend_ytd": 1200000,
       "fx_exposure": "SEK"
     },
@@ -64,8 +64,8 @@
       "asset_class": "Nordic equity",
       "quantity": 317300,
       "cost_basis": 22400000,
-      "current_mv": 25999563,
-      "ytd_return_pct": -23.4,
+      "current_mv": 25384000,
+      "ytd_return_pct": -25.2,
       "dividend_ytd": 180000,
       "fx_exposure": "SEK"
     },
@@ -75,8 +75,8 @@
       "asset_class": "Nordic equity",
       "quantity": 72800,
       "cost_basis": 20800000,
-      "current_mv": 24009439,
-      "ytd_return_pct": -7.0,
+      "current_mv": 24613680,
+      "ytd_return_pct": -4.7,
       "dividend_ytd": 360000,
       "fx_exposure": "SEK"
     },
@@ -86,8 +86,8 @@
       "asset_class": "Nordic equity",
       "quantity": 59500,
       "cost_basis": 18900000,
-      "current_mv": 22009050,
-      "ytd_return_pct": 22.6,
+      "current_mv": 23103849,
+      "ytd_return_pct": 28.7,
       "dividend_ytd": 550000,
       "fx_exposure": "SEK"
     },
@@ -97,8 +97,8 @@
       "asset_class": "US tech",
       "quantity": 5300,
       "cost_basis": 24000000,
-      "current_mv": 35947481,
-      "ytd_return_pct": 16.8,
+      "current_mv": 36215404,
+      "ytd_return_pct": 19.0,
       "dividend_ytd": 180000,
       "fx_exposure": "USD"
     },
@@ -108,8 +108,8 @@
       "asset_class": "US tech",
       "quantity": 7700,
       "cost_basis": 15000000,
-      "current_mv": 21992407,
-      "ytd_return_pct": 11.3,
+      "current_mv": 21571894,
+      "ytd_return_pct": 10.4,
       "dividend_ytd": 70000,
       "fx_exposure": "USD"
     },
@@ -119,8 +119,8 @@
       "asset_class": "US tech",
       "quantity": 5600,
       "cost_basis": 14500000,
-      "current_mv": 21839776,
-      "ytd_return_pct": -12.9,
+      "current_mv": 20647845,
+      "ytd_return_pct": -16.7,
       "dividend_ytd": 120000,
       "fx_exposure": "USD"
     },
@@ -130,8 +130,8 @@
       "asset_class": "US tech",
       "quantity": 8100,
       "cost_basis": 7500000,
-      "current_mv": 16007359,
-      "ytd_return_pct": 10.5,
+      "current_mv": 15728693,
+      "ytd_return_pct": 9.8,
       "dividend_ytd": 10000,
       "fx_exposure": "USD"
     },
@@ -163,8 +163,8 @@
       "asset_class": "EU fixed income",
       "quantity": 18400,
       "cost_basis": 23600000,
-      "current_mv": 24058745,
-      "ytd_return_pct": -1.1,
+      "current_mv": 24050750,
+      "ytd_return_pct": -0.5,
       "dividend_ytd": 840000,
       "fx_exposure": "EUR"
     },
@@ -185,8 +185,8 @@
       "asset_class": "Gulf real estate",
       "quantity": 867300,
       "cost_basis": 27000000,
-      "current_mv": 31998651,
-      "ytd_return_pct": -1.1,
+      "current_mv": 32334062,
+      "ytd_return_pct": 1.0,
       "dividend_ytd": 600000,
       "fx_exposure": "SAR"
     },
@@ -213,5 +213,5 @@
       "fx_exposure": "USD"
     }
   ],
-  "valuation_note": "Liquid positions marked to market 2026-06-10 (live prices x live FX); bonds/illiquid funds at last statement valuation."
+  "valuation_note": "Liquid positions marked to market 2026-06-17 (live prices x live FX); bonds/illiquid funds at last statement valuation."
 }
