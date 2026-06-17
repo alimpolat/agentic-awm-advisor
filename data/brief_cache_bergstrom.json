@@ -1,6 +1,6 @@
 {
   "client_id": "bergstrom",
-  "generated_at": "2026-06-10T05:48:55.962248Z",
+  "generated_at": "2026-06-16T23:59:18.836309Z",
   "intel_mode": "mixed",
   "opportunities": [
     {
@@ -8,7 +8,7 @@
       "asset_class": "US tech",
       "magnitude": 5.0,
       "confidence": "high",
-      "suggested_topic": "Portfolio significantly overweight in US tech by 5 percentage points relative to IPS target.",
+      "suggested_topic": "Review US tech overweight: current allocation is 20% against a 15% target.",
       "evidence_refs": [
         {
           "doc_id": "bergstrom_portfolio_q1_2026",
@@ -29,7 +29,7 @@
       "asset_class": "Gulf real estate",
       "magnitude": 5.0,
       "confidence": "high",
-      "suggested_topic": "Gulf real estate is overweight by 5 percentage points, coinciding with a notable -7.6% MoM decline in the Gulf REIT index.",
+      "suggested_topic": "Discuss Gulf real estate overweight: currently 15% vs IPS target of 10%.",
       "evidence_refs": [
         {
           "doc_id": "bergstrom_portfolio_q1_2026",
@@ -39,12 +39,6 @@
         },
         {
           "doc_id": "bergstrom_ips",
-          "chunk_id": null,
-          "source_uri": null,
-          "excerpt": null
-        },
-        {
-          "doc_id": "world_monitor_snapshot",
           "chunk_id": null,
           "source_uri": null,
           "excerpt": null
@@ -53,19 +47,19 @@
     },
     {
       "trigger_type": "ips_violation",
-      "asset_class": "Portfolio-level",
-      "magnitude": -25.0,
+      "asset_class": "FX exposure",
+      "magnitude": 24.5,
       "confidence": "high",
-      "suggested_topic": "Portfolio is in significant breach of the IPS minimum SEK base-currency exposure, currently at 35.0% against a 60.0% floor.",
+      "suggested_topic": "Critical FX policy breach: SEK base-currency exposure is 35.5%, significantly below the 60% minimum.",
       "evidence_refs": [
         {
-          "doc_id": "bergstrom_ips",
+          "doc_id": "bergstrom_portfolio_q1_2026",
           "chunk_id": null,
           "source_uri": null,
           "excerpt": null
         },
         {
-          "doc_id": "bergstrom_portfolio_q1_2026",
+          "doc_id": "bergstrom_ips",
           "chunk_id": null,
           "source_uri": null,
           "excerpt": null
@@ -75,97 +69,101 @@
   ],
   "weekend_changes": [
     {
-      "claim": "The near-term economic outlook for the GCC non-oil real estate sector shows signs of softening, with Gulf listed real estate experiencing weakness over the past month. This supports the client's desire to trim the overweight position.",
-      "evidence_chunks": [
-        {
-          "doc_id": "bergstrom_meeting_notes_2026-05-26",
-          "chunk_id": null,
-          "source_uri": null,
-          "excerpt": "Gulf softness supports the trim, 'better to lighten while the assets are still well bid'."
-        }
-      ],
-      "confidence": "high",
-      "impact_on_portfolio": "The softening in Gulf listed real estate directly impacts the client's overweight Gulf real estate sleeve, reinforcing the plan to trim this position."
+      "headline": "Swedish Krona Struggles as Riksbank Maintains Cautious Stance, BBH Analysts Say",
+      "source_uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEc75LGV1vbYgXjJWi9PPRg4bi10bSkAsqXKWz_juMWcEq6YiimTPtX3MRSGex1I2e-ef5YA_-5ONV144vH3n6gecnB9ySthlRI-M4Z4mrCAscgffkLJZlgYEpnv5OX9r-9FX1QcPt3QihRbVHzQEKgK9_",
+      "ts": "2026-06-15T00:00:00Z",
+      "relevance_tag": "nordic_macro"
     },
     {
-      "claim": "A macro consensus is growing that US large-cap tech valuations are overstretched, with concerns raised over potential earnings disappointments for AI 'hyperscalers'.",
-      "evidence_chunks": [
-        {
-          "doc_id": "bis_quarterly_2026_q1",
-          "chunk_id": null,
-          "source_uri": null,
-          "excerpt": "P/E ratios for the broader market approaching dotcom bubble levels... US stock valuations remained high..."
-        },
-        {
-          "doc_id": "bergstrom_meeting_notes_2026-05-26",
-          "chunk_id": null,
-          "source_uri": null,
-          "excerpt": "US-tech valuation discomfort; 'uneasy about paying these multiples'."
-        }
-      ],
-      "confidence": "high",
-      "impact_on_portfolio": "This reinforces the client's rationale for considering a trim of the overweight US-technology sleeve."
+      "headline": "Saudi Arabia property market slows sharply as home sales drop 50 per cent in Q1",
+      "source_uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8jXJvhmiyZTATqDzmyaFKTcV0dN_VlcDuKSdHqOVJVzlsBt9EC9GEXkJfm4P-HkXT9llsGh0viONmvNS54tAvew2Ne3hB59vH7Nq3a79YQBzLC6XzIDuB7DY5JH7WePtzIukNa2gxI_Uvv4VyTsACyVPZXwePZNnIPUEL96lc6f14WPyOVSrvwh7OxsfkzcWqErJpufx9mOS2NM-3uwy_phk=",
+      "ts": "2026-06-14T00:00:00Z",
+      "relevance_tag": "gulf_real_estate"
+    },
+    {
+      "headline": "European ESG Bond & Loan Issuance Fell 24%",
+      "source_uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHs8li4NxcwRfuCaHakrfRgOMPNgr3aBj27BXdMcZF0tUjuQDhEmBm6ckNStXOPQtV5F0H2WYH2MxgyFn7-ptC94D4ARPe2KJ35eUPRRHGr8ZN2fypame7QVH5QNjZ5bHSKVKu3K7eCcgCEqMqHPBIyne6UOqZx3QkOAc6Gb4mr",
+      "ts": "2026-06-16T00:00:00Z",
+      "relevance_tag": "green_bonds"
     }
   ],
   "three_nbas": [
     {
-      "title": "Correct FX Floor and Single-Position Breaches",
-      "rationale": "Address two critical IPS violations. The portfolio's SEK exposure is 35% against a 60% minimum, requiring an increase of SEK 119.9M in SEK assets. Concurrently, seven single positions, including Investor AB (7.50%) and Emirates REIT (8.34%), exceed the 5% AUM limit. Trimming these breaches provides capital to fix the FX breach.",
-      "projected_impact": "Brings the portfolio back into compliance with the IPS, significantly reducing concentration risk and currency risk. Generates liquidity for rebalancing into strategic underweights.",
+      "title": "Execute plan to restore SEK 60% currency floor",
+      "rationale": "The portfolio's SEK exposure is at 35.5%, a critical breach of the 60% IPS minimum. This requires selling or hedging approximately SEK 118M of non-SEK assets. This action is the top priority and directly addresses the client's primary concern.",
+      "projected_impact": "Restores compliance with the IPS, reduces unhedged currency risk from USD and AED/SAR exposures, and sets the foundation for strategic reallocation.",
       "confidence": "high",
       "evidence_refs": [
         {
           "doc_id": "bergstrom_ips",
           "chunk_id": null,
           "source_uri": null,
-          "excerpt": "FX base-currency exposure must be a minimum of 60% SEK. Single position limit: 5% of total AUM in any single security."
+          "excerpt": null
+        },
+        {
+          "doc_id": "bergstrom_portfolio_q1_2026",
+          "chunk_id": null,
+          "source_uri": null,
+          "excerpt": null
+        },
+        {
+          "doc_id": "bergstrom_meeting_notes_2026-05-26",
+          "chunk_id": null,
+          "source_uri": null,
+          "excerpt": null
         }
       ],
-      "computation_trace": "PortfolioFinding: SEK exposure is 35.01% (breach of 60% floor), requiring SEK 119,910,437.64. Breaches include: Investor AB (7.50%), Atlas Copco (6.67%), Volvo (5.83%), Hexagon (5.42%), Emirates REIT (8.34%), Jabal Omar (6.67%).",
+      "computation_trace": "SEK base share = Σ(mv where fx_exposure='SEK') / AUM = SEK 171,294,395 / SEK 481,843,043 = 35.55%. Required remediation = AUM * (Floor - Current) = 481.84M * (0.60 - 0.3555) = SEK 117.82M.",
       "suggested_priority": "primary"
     },
     {
-      "title": "Trim Overweight US Tech & Gulf Real Estate",
-      "rationale": "Systematically reduce the +5.0pp overweights in both US Tech and Gulf Real Estate. This aligns with the client's stated concern about high US tech valuations and a desire to lighten Gulf holdings. Macro findings support this: US tech valuations are viewed as stretched, and the GCC real estate market is showing signs of softening.",
-      "projected_impact": "Reduces exposure to potentially overpriced and softening asset classes, crystallises gains, and provides the primary funding source for correcting the SEK FX breach and reallocating to underweight sleeves.",
+      "title": "Trim overweight Gulf RE & US Tech sleeves",
+      "rationale": "Both sleeves are 5.0pp overweight. Recent market intel contradicts the client's 'still well bid' assumption for Gulf RE (Gulf REIT index -3.9% MoM, Saudi sales -50% Q1). This provides a tactical window to trim the 15% allocation back towards the 10% target, funding part of the FX remediation. The US tech trim aligns with the client's stated valuation discomfort.",
+      "projected_impact": "Reduces concentration risk, crystallizes gains, and generates ~SEK 48M in proceeds for reallocation to underweight sleeves (EU Fixed Income) and restoring SEK exposure.",
       "confidence": "high",
       "evidence_refs": [
         {
-          "doc_id": "bis_quarterly_2026_q1",
+          "doc_id": "bergstrom_ips",
           "chunk_id": null,
           "source_uri": null,
-          "excerpt": "A macro consensus is growing that US large-cap tech valuations are overstretched..."
+          "excerpt": null
+        },
+        {
+          "doc_id": "bergstrom_portfolio_q1_2026",
+          "chunk_id": null,
+          "source_uri": null,
+          "excerpt": null
         },
         {
           "doc_id": "bergstrom_meeting_notes_2026-05-26",
           "chunk_id": null,
           "source_uri": null,
-          "excerpt": "Gulf softness supports the trim... US-tech valuation discomfort..."
+          "excerpt": null
         }
       ],
-      "computation_trace": "PortfolioFinding: US tech drift = +5.00pp (20% vs 15% target). Gulf real estate drift = +5.00pp (15% vs 10% target).",
+      "computation_trace": "Drift = current_alloc − target_alloc. Gulf real estate: 15.0% − 10.0% = +5.00pp. US tech: 20.0% − 15.0% = +5.00pp. Proceeds from trimming 5% of AUM from each sleeve would be SEK ~24.09M each.",
       "suggested_priority": "secondary"
     },
     {
-      "title": "Initiate Reallocation to EUR Green Bonds",
-      "rationale": "Act on the client's request to increase green bond holdings while addressing the -5.0pp underweight in EU Fixed Income. The ECB's easing cycle improves the timing for this allocation, particularly for bonds with duration positioned for a falling rate environment. This is an opportune moment to execute.",
-      "projected_impact": "Increases portfolio ESG alignment, rebalances the underweight fixed income sleeve, and positions the portfolio to benefit from the current ECB rate trajectory.",
+      "title": "Remediate single-position limit breaches",
+      "rationale": "Eight positions have breached the 5% single-position limit, including client-mentioned Hexagon (5.27%). The most significant are Emirates REIT (8.3%) and Investor AB (7.6%). This is a direct IPS violation requiring a systematic trim plan to restore compliance.",
+      "projected_impact": "Reduces idiosyncratic risk from oversized single positions and ensures adherence to the portfolio's risk management framework as defined in the IPS.",
       "confidence": "high",
       "evidence_refs": [
         {
-          "doc_id": "ecb_economic_bulletin_2026",
+          "doc_id": "bergstrom_ips",
           "chunk_id": null,
           "source_uri": null,
-          "excerpt": "ECB Governing Council...eased the deposit facility rate to 2.00% with an easing cycle underway."
+          "excerpt": null
         },
         {
-          "doc_id": "bergstrom_meeting_notes_2026-05-26",
+          "doc_id": "bergstrom_portfolio_q1_2026",
           "chunk_id": null,
           "source_uri": null,
-          "excerpt": "Green bonds – move while rates fall, wanting reallocation executed, not studied."
+          "excerpt": null
         }
       ],
-      "computation_trace": "PortfolioFinding: EU fixed income drift = -5.00pp (15% vs 20% target).",
+      "computation_trace": "Single-name position > 5% AUM check. Breaches confirmed for: Emirates REIT (8.30%), Investor AB (7.57%), Atlas Copco (6.97%), Volvo AB (5.83%), German Bund (5.81%), Jabal Omar (6.71%), Hexagon AB (5.27%), Assa Abloy (5.11%).",
       "suggested_priority": "tertiary"
     }
   ],
@@ -173,12 +171,12 @@
     {
       "kind": "fx",
       "severity": "action",
-      "note": "Portfolio SEK exposure is 35.0% against a mandatory 60.0% floor defined in the IPS. This is a significant breach requiring immediate action."
+      "note": "SEK base-currency exposure is 35.5%, a critical breach of the 60% IPS minimum. A remediation of SEK ~118M is required to restore compliance."
     },
     {
       "kind": "concentration",
       "severity": "action",
-      "note": "Multiple single positions breach the 5% IPS limit. Key breaches include Emirates REIT (8.34%), Investor AB (7.50%), and Jabal Omar Dev. Co. (6.67%). Requires immediate trimming to restore compliance."
+      "note": "Multiple single-name positions have breached the 5% AUM limit. Key breaches include Emirates REIT (8.3%), Investor AB (7.6%), Atlas Copco (7.0%), and Hexagon (5.3%)."
     }
   ]
 }
