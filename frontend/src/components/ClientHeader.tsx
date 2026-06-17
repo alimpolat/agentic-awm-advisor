@@ -187,9 +187,13 @@ export default function ClientHeader({ client, brief }: Props) {
                 const spark = live
                   ? series!.closes
                   : sparkSeries(h.ytd_return_pct, i * 3.7);
-                const isPositive = live
+                // YTD cell reflects the actual YTD return; the sparkline
+                // reflects the 30-day trend — they can legitimately disagree
+                // (e.g. up YTD but down over the last month).
+                const ytdPositive = h.ytd_return_pct >= 0;
+                const trendPositive = live
                   ? spark[spark.length - 1] >= spark[0]
-                  : h.ytd_return_pct >= 0;
+                  : ytdPositive;
                 return (
                   <tr
                     key={h.ticker}
@@ -211,10 +215,10 @@ export default function ClientHeader({ client, brief }: Props) {
                     </td>
                     <td
                       className={`py-2 pr-4 font-mono text-[11px] tabular-nums whitespace-nowrap font-semibold ${
-                        isPositive ? "text-olive" : "text-rust"
+                        ytdPositive ? "text-olive" : "text-rust"
                       }`}
                     >
-                      {isPositive ? "+" : ""}
+                      {ytdPositive ? "+" : ""}
                       {h.ytd_return_pct.toFixed(1)}%
                     </td>
                     <td className="py-2 pr-4 font-mono text-[11px] text-gray-700">
@@ -223,7 +227,7 @@ export default function ClientHeader({ client, brief }: Props) {
                     <td className="py-2">
                       <Sparkline
                         data={spark}
-                        positive={isPositive}
+                        positive={trendPositive}
                         indicative={!live}
                         width={80}
                         height={24}
