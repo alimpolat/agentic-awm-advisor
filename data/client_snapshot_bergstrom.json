@@ -1,7 +1,7 @@
 {
   "client_id": "bergstrom",
   "client_name": "Bergström Family Office",
-  "aum_sek": 479857590.0,
+  "aum_sek": 481843043.0,
   "holdings": [
     {
       "ticker": "INVE-B.ST",
@@ -9,8 +9,8 @@
       "asset_class": "Nordic equity",
       "quantity": 95300.0,
       "cost_basis": 27000000.0,
-      "current_mv": 35999575.0,
-      "ytd_return_pct": 15.9,
+      "current_mv": 36485606.0,
+      "ytd_return_pct": 17.5,
       "dividend_ytd": 1020000.0,
       "fx_exposure": "SEK"
     },
@@ -20,8 +20,8 @@
       "asset_class": "Nordic equity",
       "quantity": 178500.0,
       "cost_basis": 24500000.0,
-      "current_mv": 31996125.0,
-      "ytd_return_pct": 6.9,
+      "current_mv": 33593699.0,
+      "ytd_return_pct": 12.2,
       "dividend_ytd": 430000.0,
       "fx_exposure": "SEK"
     },
@@ -31,8 +31,8 @@
       "asset_class": "Nordic equity",
       "quantity": 87800.0,
       "cost_basis": 23000000.0,
-      "current_mv": 27999419.0,
-      "ytd_return_pct": 7.1,
+      "current_mv": 28113561.0,
+      "ytd_return_pct": 7.5,
       "dividend_ytd": 1200000.0,
       "fx_exposure": "SEK"
     },
@@ -42,8 +42,8 @@
       "asset_class": "Nordic equity",
       "quantity": 317300.0,
       "cost_basis": 22400000.0,
-      "current_mv": 25999563.0,
-      "ytd_return_pct": -23.4,
+      "current_mv": 25384000.0,
+      "ytd_return_pct": -25.2,
       "dividend_ytd": 180000.0,
       "fx_exposure": "SEK"
     },
@@ -53,8 +53,8 @@
       "asset_class": "Nordic equity",
       "quantity": 72800.0,
       "cost_basis": 20800000.0,
-      "current_mv": 24009439.0,
-      "ytd_return_pct": -7.0,
+      "current_mv": 24613680.0,
+      "ytd_return_pct": -4.7,
       "dividend_ytd": 360000.0,
       "fx_exposure": "SEK"
     },
@@ -64,8 +64,8 @@
       "asset_class": "Nordic equity",
       "quantity": 59500.0,
       "cost_basis": 18900000.0,
-      "current_mv": 22009050.0,
-      "ytd_return_pct": 22.6,
+      "current_mv": 23103849.0,
+      "ytd_return_pct": 28.7,
       "dividend_ytd": 550000.0,
       "fx_exposure": "SEK"
     },
@@ -75,8 +75,8 @@
       "asset_class": "US tech",
       "quantity": 5300.0,
       "cost_basis": 24000000.0,
-      "current_mv": 35947481.0,
-      "ytd_return_pct": 16.8,
+      "current_mv": 36215404.0,
+      "ytd_return_pct": 19.0,
       "dividend_ytd": 180000.0,
       "fx_exposure": "USD"
     },
@@ -86,8 +86,8 @@
       "asset_class": "US tech",
       "quantity": 7700.0,
       "cost_basis": 15000000.0,
-      "current_mv": 21992407.0,
-      "ytd_return_pct": 11.3,
+      "current_mv": 21571894.0,
+      "ytd_return_pct": 10.4,
       "dividend_ytd": 70000.0,
       "fx_exposure": "USD"
     },
@@ -97,8 +97,8 @@
       "asset_class": "US tech",
       "quantity": 5600.0,
       "cost_basis": 14500000.0,
-      "current_mv": 21839776.0,
-      "ytd_return_pct": -12.9,
+      "current_mv": 20647845.0,
+      "ytd_return_pct": -16.7,
       "dividend_ytd": 120000.0,
       "fx_exposure": "USD"
     },
@@ -108,8 +108,8 @@
       "asset_class": "US tech",
       "quantity": 8100.0,
       "cost_basis": 7500000.0,
-      "current_mv": 16007359.0,
-      "ytd_return_pct": 10.5,
+      "current_mv": 15728693.0,
+      "ytd_return_pct": 9.8,
       "dividend_ytd": 10000.0,
       "fx_exposure": "USD"
     },
@@ -141,8 +141,8 @@
       "asset_class": "EU fixed income",
       "quantity": 18400.0,
       "cost_basis": 23600000.0,
-      "current_mv": 24058745.0,
-      "ytd_return_pct": -1.1,
+      "current_mv": 24050750.0,
+      "ytd_return_pct": -0.5,
       "dividend_ytd": 840000.0,
       "fx_exposure": "EUR"
     },
@@ -163,8 +163,8 @@
       "asset_class": "Gulf real estate",
       "quantity": 867300.0,
       "cost_basis": 27000000.0,
-      "current_mv": 31998651.0,
-      "ytd_return_pct": -1.1,
+      "current_mv": 32334062.0,
+      "ytd_return_pct": 1.0,
       "dividend_ytd": 600000.0,
       "fx_exposure": "SAR"
     },
@@ -199,21 +199,24 @@
     "Alternatives": 0.2
   },
   "stated_concerns": [
-    "FX floor breach – now the priority.",
-    "Hexagon drawdown and single-name sizing, checking if larger Nordic single names have grown past the 5% single-position limit.",
-    "Gulf softness supports the trim, 'better to lighten while the assets are still well bid'.",
-    "Green bonds – move while rates fall, wanting reallocation executed, not studied.",
-    "Gulf concentration creeping above target; 'comfortable with the assets but not with the size'.",
-    "US-tech valuation discomfort; 'uneasy about paying these multiples'."
+    "uncomfortable with the valuation of the sleeve, particularly the single-name AI exposure",
+    "Gulf concentration creeping above target... \"comfortable with the assets but not with the size,\" and wants to understand the regional macro backdrop (oil, Gulf rates) before trimming",
+    "US-tech valuation discomfort... principals are \"uneasy about paying these multiples\" and open to a partial trim",
+    "Interest in green-bond reallocation... family wants the European fixed-income sleeve rebuilt toward green bonds, funded from trimming the overweight sleeves",
+    "FX floor breach — now the priority... SEK base-currency exposure stands near 35% against the 60% IPS minimum",
+    "Hexagon drawdown and single-name sizing... whether the larger Nordic single names have grown past the 5% single-position limit",
+    "Gulf softness supports the trim... \"better to lighten while the assets are still well bid.\"",
+    "Green bonds — move while rates fall... family wants the green-bond reallocation executed, not studied"
   ],
   "restrictions": [
     "No direct fossil-fuel producers.",
     "No direct holdings in upstream oil, gas, or coal extraction companies.",
-    "ESG-screened equity.",
-    "Single-name equity must pass a Nordic private bank's ESG screen (no controversial weapons, no UN Global Compact violators).",
-    "Single position limit: 5% of total AUM in any single security.",
-    "FX base-currency exposure must be a minimum of 60% SEK.",
-    "At least 5% of AUM must be in instruments realisable within five business days."
+    "Single-name equity must pass a Nordic private bank's ESG screen.",
+    "No controversial weapons.",
+    "No UN Global Compact violators.",
+    "Single position ≤ 5% of total AUM (funds and broad ETFs exempt).",
+    "A minimum of 60% SEK base-currency exposure across the total book.",
+    "Liquidity floor: ≥5% in instruments realisable within five business days."
   ],
   "last_meeting_date": "2026-05-26"
 }
