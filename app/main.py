@@ -52,6 +52,39 @@ def _cache_path_for(client_id: str) -> Path:
     return BRIEF_CACHE_PATH.parent / f"brief_cache_{client_id}.json"
 
 
+async def _mark_to_market(client_id: str) -> None:
+    """Re-mark the portfolio to live market prices before a pipeline run.
+
+    Runs scripts/mark_to_market.py as a subprocess (it talks to Yahoo/FX feeds
+    and rewrites data/{client_id}_portfolio.json).  Fail-open by design: if the
+    feeds are unreachable or the script errors, the pipeline proceeds on the
+    last-written valuations — stale-but-real beats no brief.
+    """
+    if client_id != "bergstrom":
+        return  # only the bergstrom book has live-tickered holdings
+    repo_root = Path(__file__).resolve().parents[1]
+    script = repo_root / "scripts" / "mark_to_market.py"
+    try:
+        import sys
+
+        proc = await asyncio.create_subprocess_exec(
+            sys.executable, str(script),
+            cwd=str(repo_root),
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.STDOUT,
+        )
+        out, _ = await asyncio.wait_for(proc.communicate(), timeout=90)
+        if proc.returncode == 0:
+            logger.info("mark-to-market refreshed before pipeline run")
+        else:
+            logger.warning(
+                "mark-to-market exited %s — using last valuations.\n%s",
+                proc.returncode, out.decode(errors="replace")[-500:],
+            )
+    except Exception:
+        logger.exception("mark-to-market failed — using last valuations")
+
+
 async def _regen_async(client_id: str) -> None:
     """Fire-and-forget coroutine: regenerate the brief and write it to disk.
 
@@ -61,6 +94,8 @@ async def _regen_async(client_id: str) -> None:
     so they never crash the server.
     """
     try:
+        # Fresh valuations first so every agent reasons over today's book.
+        await _mark_to_market(client_id)
         brief = await generate_brief(client_id, datetime.now(timezone.utc))
         save_brief_cache(brief, _cache_path_for(client_id))
         logger.info("Background regen complete for %s", client_id)
